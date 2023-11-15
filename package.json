@@ -1,0 +1,48 @@
+{
+  "name": "spaum-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mapbox/node-pre-gyp": "^1.0.11",
+    "@mui/icons-material": "^5.14.12",
+    "@mui/material": "^5.14.12",
+    "@mui/x-data-grid": "^6.18.1",
+    "@react-rxjs/core": "^0.10.7",
+    "@react-rxjs/utils": "^0.9.7",
+    "axios": "^1.5.1",
+    "bcryptjs": "^2.4.3",
+    "crypto-js": "^4.1.1",
+    "file-saver": "^2.0.5",
+    "next": "^13.5.4",
+    "observable-hooks": "^4.2.3",
+    "react": "^18.2.0",
+    "react-dom": "latest",
+    "react-dropzone": "^14.2.3",
+    "react-google-charts": "^4.0.1",
+    "react-hook-form": "^7.48.2",
+    "react-query": "^3.39.3",
+    "react-select": "^5.7.7",
+    "read-excel-file": "^5.7.1",
+    "rxjs": "^7.8.1",
+    "sheetjs-style": "^0.15.8",
+    "styled-components": "^6.0.8"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.7",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "prettier": "3.0.3",
+    "typescript": "latest"
+  }
+}
