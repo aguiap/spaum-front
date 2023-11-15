@@ -121,7 +121,7 @@ export default function BasicModal() {
   const handleCreateMultipleSubject = () => {
     ApiSpaum.createSubjectMultiple(modal.id as bigint, dataProcessing).then(
       () => {
-        router.reload();
+        modalManage$.next({ showModal: false });
       }
     );
   };
