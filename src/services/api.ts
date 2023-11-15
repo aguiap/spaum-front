@@ -46,7 +46,7 @@ axios.interceptors.response.use(
     if (!equalsNullOrUndefined(session$.getValue().expiration)) {
       // @ts-ignore
       const expireated: string = session$.getValue().expiration;
-      if (new Date().getTime() - Date.parse(expireated) >= 30000 / 1000)
+      if (new Date().getTime() - Date.parse(expireated) >= 3600000 / 1000)
         window.location.replace(`${BASE_URL}/login?userExpired=1`);
     }
     if (
