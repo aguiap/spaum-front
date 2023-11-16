@@ -18,7 +18,7 @@ import { importDataProcessing$ } from "@/store";
 
 export const DashboardPanel = () => {
   const dataProcessing = useObservableState(importDataProcessing$);
-  const [expandPanel, setExpandPanel] = useState(false);
+  const [expandPanel, setExpandPanel] = useState(true);
   const [showTitle, setShowTitle] = useState(0);
   const [showPanel, setShowPanel] = useState(true);
   const router = useRouter();
@@ -71,6 +71,7 @@ export const DashboardPanel = () => {
             </PanelTitles>
             <Panel>
               <PanelAccordion
+                expanded={expandPanel}
                 style={{
                   boxShadow: "none",
                   borderRadius: "100px"

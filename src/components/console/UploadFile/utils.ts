@@ -31,6 +31,7 @@ export const normalizeJsonExcel = async (data: any, path: string) => {
     const hasCourse = checkSelectCourses(path);
     data = removeNullRows(data);
     const keys = getKeys(data);
+    validateColumns(keys)
     data.shift();
     const convertedData = convertArrayToMapJson(data, keys);
     importDataProcessing$.next({
@@ -71,6 +72,19 @@ export const normalizeJsonExcel = async (data: any, path: string) => {
     loading$.next(false);
   }
 };
+
+const validateColumns = (keys: any) => {
+ if(keys.indexOf(RequiredAttributes.DISCIPLINA) == -1 && keys.indexOf(RequiredAttributes.DISCIPLINA.toLowerCase()) == -1 && keys.indexOf(RequiredAttributes.DISCIPLINA.toUpperCase()))
+   throw new Error("invalidFileExcel");
+  if(keys.indexOf(RequiredAttributes.NOME) == -1 && keys.indexOf(RequiredAttributes.NOME.toLowerCase()) == -1 && keys.indexOf(RequiredAttributes.NOME.toUpperCase()))
+    throw new Error("invalidFileExcel")
+  if(keys.indexOf(RequiredAttributes.NOTA1) == -1 && keys.indexOf(RequiredAttributes.NOTA1.toLowerCase()) == -1 && keys.indexOf(RequiredAttributes.NOTA1.toUpperCase()))
+    throw new Error("invalidFileExcel")
+  if(keys.indexOf(RequiredAttributes.FALTAS_TOTAL) == -1 && keys.indexOf(RequiredAttributes.FALTAS_TOTAL.toLowerCase()) == -1 && keys.indexOf(RequiredAttributes.FALTAS_TOTAL.toUpperCase()))
+    throw new Error("invalidFileExcel")
+  if(keys.indexOf(RequiredAttributes.MATRICULA) == -1 && keys.indexOf(RequiredAttributes.MATRICULA.toLowerCase()) == -1 && keys.indexOf(RequiredAttributes.MATRICULA.toUpperCase()))
+    throw new Error("invalidFileExcel")
+}
 
 const checkSelectCourses = (path: string) => {
   let courses: any = cloneDeep(importCoursesRules$.getValue());

@@ -34,7 +34,6 @@ export const InputSubject = styled.input`
 
 export const UlCourses = styled.ul`
   margin: auto;
-  padding-top: 3rem;
   padding-bottom: 1rem;
 
   li,
