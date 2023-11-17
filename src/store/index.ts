@@ -45,8 +45,6 @@ export const session$ = new BehaviorSubject(initialSession);
 
 export const loading$ = new BehaviorSubject(initialLoading);
 
-export const toastRequest$ = new BehaviorSubject(initialToastRequest);
-
 export const modalManage$ = new BehaviorSubject(initialModalManage);
 
 export const selectCoursesValue$ = new BehaviorSubject(null);

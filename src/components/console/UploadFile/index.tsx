@@ -10,7 +10,6 @@ import { useEffect, useMemo } from "react";
 import readXlsxFile from "read-excel-file";
 import { useDropzone } from "react-dropzone";
 import { Typography } from "@mui/material";
-import CloudUploadRoundedIcon from "@mui/icons-material/CloudUploadRounded";
 import { callToast, tx } from "@/utils/functions";
 import Image from "next/image";
 import { grayColor } from "@/utils/constant/colors";
@@ -164,7 +163,7 @@ export const UploadFile = () => {
             <ButtonUploadFile
               component="label"
               variant="contained"
-              startIcon={<CloudUploadRoundedIcon />}
+              // startIcon={<CloudUploadRoundedIcon />}
               onClick={() => open}
             >
               {tx("Console.Import.importExcel")}

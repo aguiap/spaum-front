@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { callToast, tx } from "@/utils/functions";
 import { ToastType } from "@/components/console/UploadFile/enum";
 import Head from "next/head";
+import {ToastContainer} from "react-toastify";
 
 export default function Login() {
   const searchParams = useSearchParams();

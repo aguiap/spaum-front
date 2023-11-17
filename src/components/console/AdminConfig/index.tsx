@@ -9,7 +9,6 @@ import {
 import { IconButton, InputAdornment } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
 import React, { useState } from "react";
 import { initialSession, session$ } from "@/store";
 import { useRouter } from "next/router";
@@ -83,7 +82,7 @@ export default function AdminConfig() {
                     onMouseDown={handleMouseDownPassword}
                     edge="end"
                   >
-                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                    {/*{showPassword ? <VisibilityOff /> : <Visibility />}*/}
                   </IconButton>
                 </InputAdornment>
               }

@@ -13,6 +13,7 @@ import Image from "next/image";
 import { Tooltip } from "@mui/material";
 import { DefaultChartPie } from "@/components/DefaultChartPie";
 import { exportToExcel } from "@/components/token/DataGridToken/utils";
+import {grayColor, greenColor, orangeColor, redColor, yellowColor} from "@/utils/constant/colors";
 
 const columns: GridColDef[] = [
   {
@@ -237,14 +238,16 @@ export default function DataGridToken({ data, fileName }: DataGridTokenProps) {
           <DefaultChartPie
             data={chartsDataNote}
             options={{
-              title: tx("Console.Charts.noteStatus")
+              title: tx("Console.Charts.noteStatus"),
+              colors: [grayColor, yellowColor, orangeColor, redColor],
             }}
           ></DefaultChartPie>
 
           <DefaultChartPie
             data={chartsDataFouls}
             options={{
-              title: tx("Console.Charts.foulStatus")
+              title: tx("Console.Charts.foulStatus"),
+              colors: [grayColor, yellowColor, orangeColor, redColor],
             }}
           ></DefaultChartPie>
         </ChartBox>

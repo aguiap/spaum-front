@@ -12,9 +12,19 @@ export const ChartsSection = styled.section`
   display: flex;
   margin: auto;
   flex-direction: column;
-  > section {
+  > section{
     display: flex;
     margin: 2rem auto;
+  }
+`;
+
+export const SectionChart = styled.section`
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  article{
+    width: 100%;
   }
 `;
 

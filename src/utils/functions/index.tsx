@@ -1,7 +1,8 @@
 import jsonPt from "../../../public/locales/pt/common.json";
-import { loading$, toastRequest$ } from "@/store";
 import { ToastType } from "@/components/console/UploadFile/enum";
-import { ToastRequestInterceptor } from "@/types";
+import {toast} from "react-toastify";
+import {loading$} from "@/store";
+import {MessageToast} from "@/components/MessageToast";
 
 export const tx = (text: string) => {
   let jsonData = jsonPt;
@@ -30,21 +31,17 @@ export const responseInterceptors = (typeToast: ToastType, message: string) => {
 };
 
 export const callToast = (typeToast: ToastType, message: string) => {
-  const toastRequest: ToastRequestInterceptor = {
-    showToast: true,
-    typeToast: typeToast,
-    message: message,
-    timestamp: new Date().getTime()
-  };
-
-  toastRequest.clearToast = setTimeout(() => {
-    toastRequest$.next({ ...toastRequest, showToast: false });
-  }, 4000);
-
-  toastRequest$.next({ ...toastRequest$.getValue(), showToast: false });
-  setTimeout(() => {
-    toastRequest$.next(toastRequest);
-  }, 500);
+  toast(<MessageToast message={message}></MessageToast>, {
+    position: "bottom-right",
+    autoClose: typeToast === ToastType.SUCCESS ? 1000 : 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: false,
+    progress: undefined,
+    theme: "dark",
+    type: typeToast
+  });
 };
 
 export const isNotEmpty = (list: any) => {
