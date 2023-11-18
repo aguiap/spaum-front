@@ -2,27 +2,18 @@ import { BehaviorSubject } from "rxjs";
 import {
   ImportDataProcessing,
   ModalManage,
-  ToastRequestInterceptor,
   TokensAccess
 } from "@/types";
-import { ToastType } from "@/components/console/UploadFile/enum";
 
 export const initialSession: TokensAccess = {
   accessToken: "",
   refreshToken: "",
   authenticated: false,
-  username: ""
+  username: "",
+  expiration: ""
 };
 
 const initialLoading: boolean = false;
-
-const initialToastRequest: ToastRequestInterceptor = {
-  showToast: false,
-  typeToast: ToastType.ERROR,
-  message: "",
-  clearToast: null,
-  timestamp: 0
-};
 
 const initialModalManage: ModalManage = {
   showModal: false

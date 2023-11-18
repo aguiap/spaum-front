@@ -1,25 +1,18 @@
-import { CoursesConfig } from "@/components/console/CoursesConfig";
+import {CoursesConfig} from "@/components/console/CoursesConfig";
 import Head from "next/head";
-import { tx } from "@/utils/functions";
-import { useObservableState } from "observable-hooks";
-import { session$ } from "@/store";
-import { useEffect } from "react";
-import { BASE_URL } from "@/services/api";
+import {tx} from "@/utils/functions";
+import {session$} from "@/store";
+import {useObservableState} from "observable-hooks";
 
 export default function Courses() {
-  const session = useObservableState(session$);
+    const session = useObservableState(session$);
 
-  useEffect(() => {
-    if (!session.authenticated || session.accessToken === "")
-      window.location.replace(`${BASE_URL}/login?userExpired=1`);
-  }, [session]);
-
-  return (
-    <>
-      <Head>
-        <title>{tx("Console.Courses.pageCourses")}</title>
-      </Head>
-      <CoursesConfig></CoursesConfig>
-    </>
-  );
+    return (
+        <>
+            <Head>
+                <title>{tx("Console.Courses.pageCourses")}</title>
+            </Head>
+            {session.authenticated && <CoursesConfig></CoursesConfig>}
+        </>
+    );
 }

@@ -3,7 +3,7 @@ import { ToastType } from "@/components/console/UploadFile/enum";
 interface TokensAccess {
   accessToken: string;
   refreshToken: string;
-  expiration?: string;
+  expiration: string;
   created?: string;
   authenticated: boolean;
   username: string;

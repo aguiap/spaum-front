@@ -10,7 +10,7 @@ import { useEffect, useMemo } from "react";
 import readXlsxFile from "read-excel-file";
 import { useDropzone } from "react-dropzone";
 import { Typography } from "@mui/material";
-import { callToast, tx } from "@/utils/functions";
+import {callToast, handleNavigation, tx} from "@/utils/functions";
 import Image from "next/image";
 import { grayColor } from "@/utils/constant/colors";
 import { SelectDefault } from "@/components/SelectDefault";
@@ -60,10 +60,6 @@ export const UploadFile = () => {
     "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
   const excelType2 = "application/vnd.ms-excel";
   const router = useRouter();
-
-  const handleNavigation = (page: string) => {
-    router.replace(page).then(() => {});
-  };
 
   const acceptFile = {
     accept: {
@@ -172,7 +168,7 @@ export const UploadFile = () => {
         </article>
         <AsideFileUploaded>{showImport && files}</AsideFileUploaded>
         <ButtonContinue
-          onClick={() => handleNavigation("/console/charts")}
+          onClick={() => handleNavigation("/console/charts", router)}
           disabled={importProcessedData.totals === 0}
           variant="contained"
         >

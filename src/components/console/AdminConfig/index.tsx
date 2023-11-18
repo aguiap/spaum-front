@@ -13,7 +13,7 @@ import React, { useState } from "react";
 import { initialSession, session$ } from "@/store";
 import { useRouter } from "next/router";
 import ApiSpaum from "@/services/spaum";
-import { tx } from "@/utils/functions";
+import {handleNavigation, handleNavigationWithoutUser, tx} from "@/utils/functions";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { MessageInputValidations } from "@/components/MessageInputValidations";
 
@@ -41,11 +41,7 @@ export default function AdminConfig() {
 
   const handleLogout = () => {
     session$.next(initialSession);
-    handleNavigation("/login");
-  };
-
-  const handleNavigation = (page: string) => {
-    router.replace(page).then(() => {});
+    handleNavigationWithoutUser("/login", router);
   };
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
