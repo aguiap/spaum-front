@@ -13,7 +13,7 @@ export default function Console() {
             <Head>
                 <title>{tx("Console.Import.importExcel")}</title>
             </Head>
-            {session.authenticated ? <UploadFile></UploadFile> : <>oi</>}
+            {session.authenticated && <UploadFile></UploadFile>}
         </>
     );
 }

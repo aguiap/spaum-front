@@ -44,7 +44,7 @@ const queryClient = new QueryClient();
 export default function App({Component, pageProps}: AppProps) {
     const searchParams = useSearchParams();
     const router = useRouter();
-    const token = searchParams.get("token");
+    const token = searchParams.get("accessToken");
     const expiration = searchParams.get("expiration");
     const username = searchParams.get("username");
 

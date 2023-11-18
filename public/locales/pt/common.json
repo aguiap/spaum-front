@@ -7,6 +7,7 @@
     "importData": "Importar dados",
     "charts": "Gráficos",
     "table": "Tabela",
+    "documentation": "Documentação",
     "Import": {
       "removeExcel" : "Remover arquivo importado",
       "dropHere": "Solte o arquivo aqui...",
@@ -40,7 +41,9 @@
     "Admin": {
       "pageAdmin": "Usuário",
       "changePassword": "Alterar Senha",
-      "out": "Sair"
+      "out": "Sair",
+      "passwordVisible": "Senha visível",
+      "passwordNotVisible": "Senha não visível"
     },
     "Charts": {
       "sendEmail": "Enviar Email",
@@ -116,5 +119,7 @@
   "userIcon": "Ícone de usuário",
   "passwordIcon": "Ícone de senha",
   "logoWritten": "Logo escrita",
-  "logoWhite": "Logo branca"
+  "logoWhite": "Logo branca",
+  "tokenNotFound": "Token não existe",
+  "loginAgain": "Faça o login novamente"
 }

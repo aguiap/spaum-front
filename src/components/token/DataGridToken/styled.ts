@@ -79,12 +79,11 @@ export const TabsComponent = styled(Tabs)`
   height: 10vh;
   button {
     max-width: 100% !important;
-    width: 50%;
+    flex: 1;
   }
 `;
 
 export const TabComponent = styled(Tab)`
-  width: 100%;
   height: 10vh;
 `;
 

@@ -75,7 +75,7 @@ export const handleNavigation = (page: string, router: NextRouter) => {
     const token = encodeURIComponent(ApiSpaum.encryptData(session$.getValue().accessToken))
     const expiration = encodeURIComponent(ApiSpaum.encryptData(session$.getValue().expiration))
     const username = encodeURIComponent(ApiSpaum.encryptData(session$.getValue().username))
-    router.replace(`${page}?token=${token}&expiration=${expiration}&username=${username}`).then(() => {
+    router.replace(`${page}?accessToken=${token}&expiration=${expiration}&username=${username}`).then(() => {
     });
 };
 
@@ -85,9 +85,9 @@ export const handleNavigationWithoutUser = (page: string, router: NextRouter) =>
 
 export const validateRefreshAuthentication = (router: NextRouter, token: string | null, expiration: string | null, username: string | null) => {
     const ignoreRouter = ['/login', '/token']
-    if (router.isReady && ignoreRouter.indexOf(router.pathname) == -1) {
+    if (router.isReady && !session$.getValue().authenticated && ignoreRouter.indexOf(router.pathname) == -1) {
         if (token == null || expiration == null || username == null) {
-            window.location.replace(`${BASE_URL}/login?userExpired=1`);
+            window.location.replace(`${BASE_URL}/login?message=userExpired`);
         } else {
             if (!session$.getValue().authenticated && session$.getValue().accessToken === "") {
                 session$.next({

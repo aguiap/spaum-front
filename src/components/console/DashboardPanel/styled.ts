@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import {
-  primaryColor,
-  secondColor,
-  tertiaryColor
+  grayColor,
+  primaryColor, primaryColorDark, redColor, redColorLight,
+  secondColor, secondColorDark,
+  tertiaryColor, yellowColor
 } from "@/utils/constant/colors";
 import {
   Accordion,
@@ -30,11 +31,12 @@ export const PanelAccordionSummary = styled(AccordionSummary)`
   border-radius: 20px 200px 200px 200px;
 `;
 
-export const PanelAccordionDetails = styled(AccordionDetails)`
+export const PanelAccordionDetails = styled(AccordionDetails)<{$active: boolean}>`
   display: flex;
   padding: 0.5rem 0;
 
   > div {
+    background-color: ${props => props.$active ? secondColorDark : 'none'};
     height: 3rem;
     display: flex;
     width: 100%;

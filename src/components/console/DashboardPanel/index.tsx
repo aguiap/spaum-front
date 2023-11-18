@@ -95,7 +95,7 @@ export const DashboardPanel = () => {
                     ></PanelImage>
                   </Grow>
                 </PanelAccordionSummary>
-                <PanelAccordionDetails>
+                <PanelAccordionDetails $active={router.pathname === "/console/import"}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(3)}
@@ -110,7 +110,7 @@ export const DashboardPanel = () => {
                   </div>
                 </PanelAccordionDetails>
                 {!equalsNullOrUndefined(dataProcessing.dataProcessing) && (
-                  <PanelAccordionDetails>
+                  <PanelAccordionDetails $active={router.pathname === "/console/charts"}>
                     <div
                       onMouseLeave={() => setShowTitle(0)}
                       onMouseEnter={() => setShowTitle(5)}
@@ -125,7 +125,7 @@ export const DashboardPanel = () => {
                     </div>
                   </PanelAccordionDetails>
                 )}
-                <PanelAccordionDetails>
+                <PanelAccordionDetails $active={router.pathname === "/console/courses"}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(2)}
@@ -139,7 +139,7 @@ export const DashboardPanel = () => {
                     ></PanelImage>
                   </div>
                 </PanelAccordionDetails>
-                <PanelAccordionDetails>
+                <PanelAccordionDetails  $active={router.pathname === "/console/admin"}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(4)}

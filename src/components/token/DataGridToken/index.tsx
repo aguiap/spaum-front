@@ -14,6 +14,7 @@ import {Tooltip} from "@mui/material";
 import {DefaultChartPie} from "@/components/DefaultChartPie";
 import {exportToExcel} from "@/components/token/DataGridToken/utils";
 import {grayColor, orangeColor, redColor, yellowColor} from "@/utils/constant/colors";
+import {Documentation} from "@/components/token/Documentation";
 
 const columns: GridColDef[] = [
     {
@@ -213,6 +214,7 @@ export default function DataGridToken({data, fileName}: DataGridTokenProps) {
                 >
                     <TabComponent value="table" label={tx("Console.table")}/>
                     <TabComponent value="charts" label={tx("Console.charts")}/>
+                    <TabComponent value="documentation" label={tx("Console.documentation")}/>
                 </TabsComponent>
             </Box>
             <div hidden={value !== "table"}>
@@ -274,6 +276,9 @@ export default function DataGridToken({data, fileName}: DataGridTokenProps) {
                         }}
                     ></DefaultChartPie>
                 </ChartBox>
+            </div>
+            <div hidden={value !== "documentation"}>
+                <Documentation></Documentation>
             </div>
         </>
     );
