@@ -42,7 +42,7 @@ export const callToast = (typeToast: ToastType, message: string) => {
         pauseOnHover: true,
         draggable: false,
         progress: undefined,
-        theme: "dark",
+        theme: "light",
         type: typeToast
     });
 };
