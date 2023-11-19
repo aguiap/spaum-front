@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -21,6 +21,7 @@
     "crypto-js": "^4.1.1",
     "file-saver": "^2.0.5",
     "next": "^14.0.3",
+    "next-http-proxy-middleware": "^1.2.6",
     "observable-hooks": "^4.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
