@@ -11,7 +11,7 @@ import {
 } from "@/components/console/DashboardPanel/styled";
 import { useState } from "react";
 import { Collapse, Grow, Slide } from "@mui/material";
-import { equalsNullOrUndefined, tx } from "@/utils/functions";
+import {equalsNullOrUndefined, handleNavigation, tx} from "@/utils/functions";
 import { useRouter } from "next/router";
 import { useObservableState } from "observable-hooks";
 import { importDataProcessing$ } from "@/store";
@@ -22,10 +22,6 @@ export const DashboardPanel = () => {
   const [showTitle, setShowTitle] = useState(0);
   const [showPanel, setShowPanel] = useState(true);
   const router = useRouter();
-
-  const handleNavigation = (page: string) => {
-    router.replace(page).then(() => {});
-  };
 
   return (
     <>
@@ -99,11 +95,11 @@ export const DashboardPanel = () => {
                     ></PanelImage>
                   </Grow>
                 </PanelAccordionSummary>
-                <PanelAccordionDetails>
+                <PanelAccordionDetails $active={router.pathname === "/console/import"}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(3)}
-                    onClick={() => handleNavigation("/console/import")}
+                    onClick={() => handleNavigation("/console/import", router)}
                   >
                     <PanelImage
                       alt={tx("buttonPanel")}
@@ -114,11 +110,11 @@ export const DashboardPanel = () => {
                   </div>
                 </PanelAccordionDetails>
                 {!equalsNullOrUndefined(dataProcessing.dataProcessing) && (
-                  <PanelAccordionDetails>
+                  <PanelAccordionDetails $active={router.pathname === "/console/charts"}>
                     <div
                       onMouseLeave={() => setShowTitle(0)}
                       onMouseEnter={() => setShowTitle(5)}
-                      onClick={() => handleNavigation("/console/charts")}
+                      onClick={() => handleNavigation("/console/charts", router)}
                     >
                       <PanelImage
                         alt={tx("buttonPanel")}
@@ -129,11 +125,11 @@ export const DashboardPanel = () => {
                     </div>
                   </PanelAccordionDetails>
                 )}
-                <PanelAccordionDetails>
+                <PanelAccordionDetails $active={router.pathname === "/console/courses"}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(2)}
-                    onClick={() => handleNavigation("/console/courses")}
+                    onClick={() => handleNavigation("/console/courses", router)}
                   >
                     <PanelImage
                       alt={tx("buttonPanel")}
@@ -143,11 +139,11 @@ export const DashboardPanel = () => {
                     ></PanelImage>
                   </div>
                 </PanelAccordionDetails>
-                <PanelAccordionDetails>
+                <PanelAccordionDetails  $active={router.pathname === "/console/admin"}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(4)}
-                    onClick={() => handleNavigation("/console/admin")}
+                    onClick={() => handleNavigation("/console/admin", router)}
                   >
                     <PanelImage
                       alt={tx("buttonPanel")}

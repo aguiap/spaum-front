@@ -3,7 +3,9 @@ const path = require("path");
 
 
 const nextConfig = {
-  esModule: true,
+  compiler: {
+    styledComponents: true,
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")]
   },

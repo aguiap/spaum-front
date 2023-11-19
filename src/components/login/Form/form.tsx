@@ -1,4 +1,4 @@
-import { tx } from "@/utils/functions";
+import {handleNavigation, tx} from "@/utils/functions";
 import {
   ButtonDefault,
   ButtonLogin,
@@ -8,7 +8,7 @@ import {
 } from "@/components/login/Form/styled";
 import ApiSpaum from "@/services/spaum";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import {NextRouter, useRouter} from "next/router";
 import { session$ } from "@/store";
 import { AxiosError } from "axios";
 import { Typography } from "@mui/material";
@@ -26,7 +26,7 @@ export const FormLogin = () => {
       .then((response: any) => {
         if (response) {
           session$.next(response.data);
-          handleNavigation("/console/import");
+          handleNavigation("/console/import", router);
         }
       })
       .catch(function (error: AxiosError<any>) {
@@ -40,10 +40,6 @@ export const FormLogin = () => {
     if (e.key === "Enter") {
       handleClickLogin();
     }
-  };
-
-  const handleNavigation = (page: string) => {
-    router.replace(page).then(() => {});
   };
 
   return (

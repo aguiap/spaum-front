@@ -7,15 +7,21 @@ import { useEffect } from "react";
 import { callToast, tx } from "@/utils/functions";
 import { ToastType } from "@/components/console/UploadFile/enum";
 import Head from "next/head";
+import {ToastContainer} from "react-toastify";
+import {useRouter} from "next/router";
 
 export default function Login() {
   const searchParams = useSearchParams();
-  const userExpired = searchParams.get("userExpired");
+  const router = useRouter();
+  let message = searchParams.get("message");
 
   useEffect(() => {
-    if (userExpired != null && userExpired == "1")
-      callToast(ToastType.WARN, "userExpired");
-  }, [userExpired != null]);
+    if (message != null){
+      callToast(ToastType.WARN, message);
+      message = null;
+      router.replace('/login').then();
+    }
+  }, [message != null, ]);
 
   return (
     <>

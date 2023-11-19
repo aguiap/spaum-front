@@ -2,7 +2,7 @@ import {
   BoxModal,
   ButtonDefault,
   ChartsSection,
-  EmailTextField,
+  EmailTextField, SectionChart,
   SendButton,
   SendPreviewForm,
   StatusAside,
@@ -25,6 +25,7 @@ import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import { convertDataToSend } from "@/components/console/ChartsData/utils";
 import { SplashLoading } from "@/components/token/SplashLoading";
+import {grayColor, orangeColor, redColor, yellowColor} from "@/utils/constant/colors";
 
 const style = {
   position: "absolute" as "absolute",
@@ -59,10 +60,10 @@ export const ChartsData = () => {
       interventionTotals;
     return [
       ["Status", "Total"],
-      ["Normal", normalTotals],
-      ["Alerta", alertTotals],
-      ["Ruim", badTotals],
-      ["Intervenção", interventionTotals]
+      [`Normal: ${normalTotals}`, normalTotals],
+      [`Alerta: ${alertTotals}`, alertTotals],
+      [`Ruim: ${badTotals}`, badTotals],
+      [`Intervenção: ${interventionTotals}`, interventionTotals]
     ];
   };
 
@@ -78,10 +79,10 @@ export const ChartsData = () => {
       interventionTotals;
     return [
       ["Status", "Total"],
-      ["Normal", normalTotals],
-      ["Alerta", alertTotals],
-      ["Ruim", badTotals],
-      ["Intervenção", interventionTotals]
+      [`Normal: ${normalTotals}`, normalTotals],
+      [`Alerta: ${alertTotals}`, alertTotals],
+      [`Ruim: ${badTotals}`, badTotals],
+      [`Intervenção: ${interventionTotals}`, interventionTotals]
     ];
   };
 
@@ -102,9 +103,10 @@ export const ChartsData = () => {
         break;
     }
 
-    title += ` até ${label}`;
+    title += ` até ${label} - Total: ${dataProcessing.totals}`;
     return {
-      title: title
+      title: title,
+      colors: [grayColor, yellowColor, orangeColor, redColor],
     };
   };
 
@@ -155,7 +157,7 @@ export const ChartsData = () => {
               {tx("Console.Charts.showPreview")}
             </ButtonDefault>
           </section>
-          <section>
+          <SectionChart>
             <article>
               <DefaultChartPie
                 data={getDataNote()}
@@ -170,7 +172,7 @@ export const ChartsData = () => {
                 ></DefaultChartPie>
               </article>
             )}
-          </section>
+          </SectionChart>
         </ChartsSection>
       )}
       {!equalsNullOrUndefined(dataProcessing.dataProcessing) &&
