@@ -95,7 +95,7 @@ export const DashboardPanel = () => {
                     ></PanelImage>
                   </Grow>
                 </PanelAccordionSummary>
-                <PanelAccordionDetails $active={router.pathname === "/console/import"}>
+                <PanelAccordionDetails active={router.pathname === "/console/import" ? 1 : 0}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(3)}
@@ -110,7 +110,7 @@ export const DashboardPanel = () => {
                   </div>
                 </PanelAccordionDetails>
                 {!equalsNullOrUndefined(dataProcessing.dataProcessing) && (
-                  <PanelAccordionDetails $active={router.pathname === "/console/charts"}>
+                  <PanelAccordionDetails active={router.pathname === "/console/charts" ? 1 : 0}>
                     <div
                       onMouseLeave={() => setShowTitle(0)}
                       onMouseEnter={() => setShowTitle(5)}
@@ -125,7 +125,7 @@ export const DashboardPanel = () => {
                     </div>
                   </PanelAccordionDetails>
                 )}
-                <PanelAccordionDetails $active={router.pathname === "/console/courses"}>
+                <PanelAccordionDetails active={router.pathname === "/console/courses" ? 1 : 0}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(2)}
@@ -139,7 +139,7 @@ export const DashboardPanel = () => {
                     ></PanelImage>
                   </div>
                 </PanelAccordionDetails>
-                <PanelAccordionDetails  $active={router.pathname === "/console/admin"}>
+                <PanelAccordionDetails  active={router.pathname === "/console/admin" ? 1 : 0}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(4)}
@@ -153,7 +153,7 @@ export const DashboardPanel = () => {
                     ></PanelImage>
                   </div>
                 </PanelAccordionDetails>
-                <PanelAccordionDetails>
+                <PanelAccordionDetails active={0}>
                   <div
                     onMouseLeave={() => setShowTitle(0)}
                     onMouseEnter={() => setShowTitle(1)}
