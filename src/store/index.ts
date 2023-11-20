@@ -49,3 +49,5 @@ export const importDataProcessing$ = new BehaviorSubject<ImportDataProcessing>(
 export const importDataProcessingSubject$ = new BehaviorSubject<any>([]);
 
 export const showImport$ = new BehaviorSubject<boolean>(false);
+
+export const showToast$ = new BehaviorSubject<boolean>(false);

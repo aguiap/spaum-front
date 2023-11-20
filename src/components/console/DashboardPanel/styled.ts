@@ -30,12 +30,12 @@ export const PanelAccordionSummary = styled(AccordionSummary)`
   border-radius: 20px 200px 200px 200px;
 `;
 
-export const PanelAccordionDetails = styled(AccordionDetails)<{$active?: boolean}>`
+export const PanelAccordionDetails = styled(AccordionDetails)<{active: number}>`
   display: flex;
   padding: 0.5rem 0;
 
   > div {
-    background-color: ${props => props.$active ? secondColorDark : 'none'};
+    background-color: ${props => props.active ? secondColorDark : 'none'};
     height: 3rem;
     display: flex;
     width: 100%;

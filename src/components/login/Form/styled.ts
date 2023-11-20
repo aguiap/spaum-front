@@ -3,10 +3,11 @@ import {
   primaryColor,
   tertiaryColor,
   secondColor,
-  primaryColorDark
+  primaryColorDark, yellowColor, redColorLight, orangeColorLight
 } from "@/utils/constant/colors";
 import Image from "next/image";
 import { Button } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 export const ButtonLogin = styled.div`
   display: flex;
@@ -29,7 +30,7 @@ export const ButtonLogin = styled.div`
     margin-top: 12.5%;
     flex: 2;
     font-size: 0.8rem;
-    color: ${primaryColorDark};
+    color: ${yellowColor};
   }
 `;
 

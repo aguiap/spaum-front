@@ -130,7 +130,8 @@ const checkSelectCourses = (path: string) => {
       importDataProcessing$.next({
         ...importDataProcessing$.getValue(),
         hasFouls: true,
-        forEmail: course.email
+        forEmail: course.email,
+        course: course.name
       });
       return true;
     }

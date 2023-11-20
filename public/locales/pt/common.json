@@ -81,7 +81,8 @@
   },
   "error": {
     "usernameorpasswordisinvalid": "Usuário ou senha inválidos!",
-    "duplicatecourse": "Esse curso já está cadastrado"
+    "duplicatecourse": "Esse curso já está cadastrado.",
+    "unhandledexception": "Erro! Por favor contate o administrador do sistema."
   },
   "errorRequest": "Requisição falhou",
   "successRequest": "Requisição feita com sucesso",
