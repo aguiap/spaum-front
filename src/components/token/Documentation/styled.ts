@@ -27,13 +27,24 @@ export const SubTitleBox = styled.div`
 
 export const TextBox = styled.div`
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  p{
+  li {
+    margin-top: 10px;
+    list-style-type: square;
+  }
+  ul {
+    padding: 1rem 1rem 1rem 4rem;
+  }
+  >p{
     margin-top: 10px;
     font-size: 1rem;
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+  
+  b{
+    font-weight: bold;
   }
 `
