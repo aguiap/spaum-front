@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { Button, IconButton } from "@mui/material";
 import { secondColor, tertiaryColor } from "@/utils/constant/colors";
 
-export const BoxFab = styled(Button)`
+export const BoxFab = styled(Button)<{component: string}>`
   background-color: ${secondColor};
   color: ${tertiaryColor};
   padding: 0.8rem;

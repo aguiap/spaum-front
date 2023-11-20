@@ -4,6 +4,7 @@ import {
   ModalManage,
   TokensAccess
 } from "@/types";
+import {ToastType} from "@/components/console/UploadFile/enum";
 
 export const initialSession: TokensAccess = {
   accessToken: "",
@@ -32,6 +33,12 @@ export const initialImportDataProcessing: ImportDataProcessing = {
   path: ""
 };
 
+const initialToast = {
+  showToast: false,
+  message: '',
+  toastType: ToastType.SUCCESS
+}
+
 export const session$ = new BehaviorSubject(initialSession);
 
 export const loading$ = new BehaviorSubject(initialLoading);
@@ -50,4 +57,4 @@ export const importDataProcessingSubject$ = new BehaviorSubject<any>([]);
 
 export const showImport$ = new BehaviorSubject<boolean>(false);
 
-export const showToast$ = new BehaviorSubject<boolean>(false);
+export const toast$ = new BehaviorSubject<typeof initialToast>(initialToast);

@@ -83,17 +83,18 @@ export default function AdminConfig() {
                                     >
                                         {showPassword ?
                                             <Image
+                                                src="../images/visibility.svg"
+                                                alt={tx("Console.Admin.passwordNotVisible")}
+                                                width={30}
+                                                height={30}
+                                            ></Image>
+                                            : <Image
                                                 src="../images/visibility-off.svg"
                                                 alt={tx("Console.Admin.passwordVisible")}
                                                 width={30}
                                                 height={30}
                                             ></Image>
-                                            : <Image
-                                                src="../images/visibility.svg"
-                                                alt={tx("Console.Admin.passwordNotVisible")}
-                                                width={30}
-                                                height={30}
-                                            ></Image>}
+                                        }
                                     </IconButton>
                                 </InputAdornment>
                             }

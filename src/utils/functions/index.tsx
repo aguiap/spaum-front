@@ -1,7 +1,7 @@
 import jsonPt from "../../../public/locales/pt/common.json";
 import {ToastType} from "@/components/console/UploadFile/enum";
 import {toast} from "react-toastify";
-import {loading$, session$, showToast$} from "@/store";
+import {loading$, session$, toast$} from "@/store";
 import {MessageToast} from "@/components/MessageToast";
 import {NextRouter} from "next/router";
 import ApiSpaum from "@/services/spaum";
@@ -34,7 +34,7 @@ export const responseInterceptors = (typeToast: ToastType, message: string) => {
 };
 
 export const callToast = (typeToast: ToastType, message: string) => {
-    if(!showToast$.getValue()){
+    if(typeToast != toast$.getValue().toastType || message != toast$.getValue().message || !toast$.getValue().showToast){
         toast(<MessageToast message={message}></MessageToast>, {
             position: "bottom-right",
             autoClose: typeToast === ToastType.SUCCESS ? 1000 : 3000,
@@ -46,8 +46,8 @@ export const callToast = (typeToast: ToastType, message: string) => {
             theme: "light",
             type: typeToast
         });
-        showToast$.next(true)
-        setTimeout(() => showToast$.next(false), 250)
+        toast$.next({showToast: true, toastType: typeToast, message: message})
+        setTimeout(() => toast$.next({showToast: false, toastType: typeToast, message: message}), 250)
     }
 };
 
