@@ -254,7 +254,7 @@ export default function BasicModal() {
       </div>
       <Zoom in={modal.showModal}>
         <BoxDiv>
-          <BoxFab variant="contained">
+          <BoxFab component="label" variant="contained">
             {tx("Console.Courses.importSubjects")}
             <VisuallyHiddenInput type="file" {...getInputProps()} />
           </BoxFab>

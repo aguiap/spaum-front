@@ -21,7 +21,7 @@ export const UploadDragFile = styled.div`
   }
 `;
 
-export const ButtonUploadFile = styled(Button)`
+export const ButtonUploadFile = styled(Button)<{component: string}>`
   margin-top: 1rem;
   color: ${tertiaryColor};
   background-color: ${grayColor};
