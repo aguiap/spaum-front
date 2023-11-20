@@ -1,9 +1,8 @@
-import styled from "styled-components";
+import styled from '@emotion/styled'
 import {
-  grayColor,
-  primaryColor, primaryColorDark, redColor, redColorLight,
+  primaryColor,
   secondColor, secondColorDark,
-  tertiaryColor, yellowColor
+  tertiaryColor,
 } from "@/utils/constant/colors";
 import {
   Accordion,
@@ -31,7 +30,7 @@ export const PanelAccordionSummary = styled(AccordionSummary)`
   border-radius: 20px 200px 200px 200px;
 `;
 
-export const PanelAccordionDetails = styled(AccordionDetails)<{$active: boolean}>`
+export const PanelAccordionDetails = styled(AccordionDetails)<{$active?: boolean}>`
   display: flex;
   padding: 0.5rem 0;
 

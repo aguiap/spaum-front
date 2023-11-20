@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from '@emotion/styled'
 import { Button, IconButton } from "@mui/material";
 import { secondColor, tertiaryColor } from "@/utils/constant/colors";
 

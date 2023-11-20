@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from '@emotion/styled'
 import { ButtonDefault } from "@/components/login/Form/styled";
 import {
   orangeColor,
