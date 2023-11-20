@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from '@emotion/styled'
 import { grayColor } from "@/utils/constant/colors";
 import Modal from "@mui/material/Modal";
 

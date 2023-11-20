@@ -157,7 +157,6 @@ export const UploadFile = () => {
               <Typography>{tx("Console.Import.dragAndDropHere")}</Typography>
             )}
             <ButtonUploadFile
-              component="label"
               variant="contained"
               // startIcon={<CloudUploadRoundedIcon />}
               onClick={() => open}

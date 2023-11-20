@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from '@emotion/styled'
 import CreatableSelect from "react-select/creatable";
 
 export const MultiTags = styled(CreatableSelect)`

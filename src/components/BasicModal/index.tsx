@@ -21,7 +21,7 @@ import {
 import { IconButton, Tooltip, Zoom } from "@mui/material";
 import Image from "next/image";
 import { BoxDiv, BoxFab, BoxFabIcon } from "@/components/BasicModal/styled";
-import styled from "styled-components";
+import styled from '@emotion/styled'
 import { useDropzone } from "react-dropzone";
 import readXlsxFile from "read-excel-file";
 import { normalizeImportSubjects } from "@/components/BasicModal/utils";
@@ -254,7 +254,7 @@ export default function BasicModal() {
       </div>
       <Zoom in={modal.showModal}>
         <BoxDiv>
-          <BoxFab component="label" variant="contained">
+          <BoxFab variant="contained">
             {tx("Console.Courses.importSubjects")}
             <VisuallyHiddenInput type="file" {...getInputProps()} />
           </BoxFab>

@@ -1,6 +1,5 @@
-import styled from "styled-components";
+import styled from '@emotion/styled'
 import Image from "next/image";
-import {Tooltip} from "@mui/material";
 
 export const Message = styled.div`
   span{
