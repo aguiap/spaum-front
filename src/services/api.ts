@@ -7,8 +7,11 @@ import {
 } from "@/utils/functions";
 import { ToastType } from "@/components/console/UploadFile/enum";
 
-export const BASE_URL = "http://localhost:3000";
-export const BASE_URL_API = "http://127.0.0.1:8080";
+// export const BASE_URL = "http://localhost:3000";
+// export const BASE_URL_API = "http://127.0.0.1:8080";
+
+export const BASE_URL = process.env.NODE_ENV == "production" ? "https://spaum-597c295705ff.herokuapp.com" : "http://localhost:3000";
+export const BASE_URL_API = process.env.NODE_ENV == "production" ? "https://spaum-api-fa8ee7093153.herokuapp.com" : "http://127.0.0.1:8080";
 
 const ignoreEndpoint: string[] = [
   "api/v1/courses/get-all-subjects",
