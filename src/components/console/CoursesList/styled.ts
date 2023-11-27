@@ -3,32 +3,32 @@ import { grayColor } from "@/utils/constant/colors";
 import Modal from "@mui/material/Modal";
 
 export const InputCourse = styled.input`
-  width: 10rem;
-  height: 2rem;
+  width: 20rem;
+  height: 4rem;
   margin: auto 0.5rem auto 0;
   border-radius: 0.3rem;
   padding-left: 1rem;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   border: ${grayColor} solid 2px;
 `;
 
 export const InputHours = styled.input`
-  width: 3rem;
-  height: 2rem;
+  width: 5rem;
+  height: 4rem;
   margin: auto 0.5rem auto 0;
   border-radius: 0.3rem;
   padding-left: 1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border: ${grayColor} solid 2px;
 `;
 
 export const InputSubject = styled.input`
-  width: 16rem;
-  height: 2rem;
+  width: 20rem;
+  height: 4rem;
   margin: auto 0.5rem auto 0;
   border-radius: 0.3rem;
   padding-left: 1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border: ${grayColor} solid 2px;
 `;
 
@@ -38,6 +38,7 @@ export const UlCourses = styled.ul`
 
   li,
   form {
+    justify-content: center;
     display: flex;
     min-height: 2rem;
     margin-bottom: 1rem;
@@ -60,4 +61,13 @@ export const UlCourses = styled.ul`
   }
 `;
 
-export const ModalSubjects = styled(Modal)``;
+export const ModalSubjects = styled(Modal)`
+  #modal-modal-title{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  li{
+    width: 100%;
+  }
+`;

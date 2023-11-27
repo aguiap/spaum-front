@@ -104,7 +104,7 @@ const initialChartsData = [
     ["Status", "Total"],
     ["Normal", 0],
     ["Alerta", 0],
-    ["Ruim", 0],
+    ["Crítico", 0],
     ["Intervenção", 0]
 ];
 
@@ -150,7 +150,7 @@ export default function DataGridToken({data, fileName}: DataGridTokenProps) {
         ).length;
         const alertTotalNotes = filteredData.filter((value: any) => value.statusNotes === "ALERTA")
             .length;
-        const badTotalNotes = filteredData.filter((value: any) => value.statusNotes === "RUIM").length;
+        const badTotalNotes = filteredData.filter((value: any) => value.statusNotes === "CRÍTICO").length;
         const interventionTotalNotes = filteredData.filter((value: any) => value.statusNotes === "INTERVENÇÃO")
             .length;
 
@@ -159,7 +159,7 @@ export default function DataGridToken({data, fileName}: DataGridTokenProps) {
         ).length;
         const alertTotalFouls = filteredData.filter((value: any) => value.statusFouls === "ALERTA")
             .length;
-        const badTotalFouls = filteredData.filter((value: any) => value.statusFouls === "RUIM").length;
+        const badTotalFouls = filteredData.filter((value: any) => value.statusFouls === "CRÍTICO").length;
         const interventionTotalFouls = filteredData.filter((value: any) => value.statusFouls === "INTERVENÇÃO")
             .length;
 
@@ -174,7 +174,7 @@ export default function DataGridToken({data, fileName}: DataGridTokenProps) {
                 alertTotalNotes
             ],
             [
-                `Ruim: ${badTotalNotes}`,
+                `Crítico: ${badTotalNotes}`,
                 badTotalNotes
             ],
             [
@@ -193,7 +193,7 @@ export default function DataGridToken({data, fileName}: DataGridTokenProps) {
                 alertTotalFouls
             ],
             [
-                `Ruim: ${badTotalFouls}`,
+                `Crítico: ${badTotalFouls}`,
                 badTotalFouls
             ],
             [
@@ -226,11 +226,11 @@ export default function DataGridToken({data, fileName}: DataGridTokenProps) {
                         initialState={{
                             pagination: {
                                 paginationModel: {
-                                    pageSize: 10
+                                    pageSize: 15
                                 }
                             }
                         }}
-                        pageSizeOptions={[10]}
+                        pageSizeOptions={[15]}
                         disableRowSelectionOnClick
                         getRowClassName={(params) => {
                             if (
@@ -239,8 +239,8 @@ export default function DataGridToken({data, fileName}: DataGridTokenProps) {
                             )
                                 return `row--INTERVENTION`;
                             if (
-                                params.row.statusNotes == "RUIM" ||
-                                params.row.statusFouls == "RUIM"
+                                params.row.statusNotes == "CRÍTICO" ||
+                                params.row.statusFouls == "CRÍTICO"
                             )
                                 return `row--BAD`;
                             return `row--ALERT`;

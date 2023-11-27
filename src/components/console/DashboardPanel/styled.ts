@@ -70,14 +70,14 @@ export const PanelTitles = styled.div`
 
 export const PanelTitle = styled(Typography)`
   background-color: ${secondColor};
-  padding: 0.4rem;
+  padding: 0.35rem;
   margin-bottom: 0.4rem;
   margin-top: 0.9rem;
   color: ${tertiaryColor};
   overflow: hidden;
   text-overflow: clip;
   white-space: nowrap;
-  font-size: 0.9rem;
+  font-size: 1rem;
   border-radius: 0.2rem;
 `;
 

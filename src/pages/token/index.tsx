@@ -40,7 +40,7 @@ export default function Token() {
                     data.analyses[i].statusNotes == "ALERT"
                         ? "ALERTA"
                         : data.analyses[i].statusNotes == "BAD"
-                            ? "RUIM"
+                            ? "CRÍTICO"
                             : data.analyses[i].statusNotes == "INTERVENTION"
                                 ? "INTERVENÇÃO"
                                 : null;
@@ -48,7 +48,7 @@ export default function Token() {
                     data.analyses[i].statusFouls == "ALERT"
                         ? "ALERTA"
                         : data.analyses[i].statusFouls == "BAD"
-                            ? "RUIM"
+                            ? "CRÍTICO"
                             : data.analyses[i].statusFouls == "INTERVENTION"
                                 ? "INTERVENÇÃO"
                                 : null;

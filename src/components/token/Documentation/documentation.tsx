@@ -1,11 +1,11 @@
 export const DOC_TEXT = {
     rulesAnalyses: "Regra de análise dos dados",
-    forNotes2: (<span>Os alunos são classificados em quatro categorias, de acordo com as suas notas e as avaliações que realizaram: <b>NORMAL</b>, <b>ALERTA</b>, <b>RUIM</b> e <b>INTERVENÇÃO</b>.</span>),
+    forNotes2: (<span>Os alunos são classificados em quatro categorias, de acordo com as suas notas e as avaliações que realizaram: <b>NORMAL</b>, <b>ALERTA</b>, <b>CRÍTICO</b> e <b>INTERVENÇÃO</b>.</span>),
     forNotes: "Análise por notas",
     forFouls: "Análise por faltas",
-    forFouls2: (<span>Os alunos são classificados em quatro categorias, de acordo com as suas faltas e as horas da matéria: <b>NORMAL</b>, <b>ALERTA</b>, <b>RUIM</b> e <b>INTERVENÇÃO</b>.</span>),
+    forFouls2: (<span>Os alunos são classificados em quatro categorias, de acordo com as suas faltas e as horas da matéria: <b>NORMAL</b>, <b>ALERTA</b>, <b>CRÍTICO</b> e <b>INTERVENÇÃO</b>.</span>),
     rulesAnalysesText: (
-        <span>Para fazer as análises, os dados são separados em quatro categorias: <b>NORMAL</b>, <b>ALERTA</b>, <b>RUIM</b> e <b>INTERVENÇÃO</b>.</span>),
+        <span>Para fazer as análises, os dados são separados em quatro categorias: <b>NORMAL</b>, <b>ALERTA</b>, <b>CRÍTICO</b> e <b>INTERVENÇÃO</b>.</span>),
     rulesAnalysesText2: (
         <span>As análises são baseadas nas notas e nas faltas dos alunos. Se o sistema não encontrar nenhum curso cadastrado, ele fará apenas a análise das notas. Se o aluno não tiver feito a avaliação ou não tiver nota, ele receberá o valor <b>0</b> na soma das notas</span>),
     forNotesNormal: (<span><b>NORMAL:</b> Alunos que não se enquadram em nenhuma das outras categorias.</span>),
@@ -14,9 +14,9 @@ export const DOC_TEXT = {
     forFoulsAlert: (
         <span><b>ALERTA:</b> Alunos que precisam de atenção para reduzir as suas faltas. São considerados em alerta:</span>),
     forNotesBad: (
-        <span><b>RUIM:</b> Alunos que estão em situação crítica e precisam de intervenção urgente. São considerados em situação ruim:</span>),
+        <span><b>CRÍTICO:</b> Alunos que estão em situação crítica e precisam de intervenção urgente. São considerados em situação criticas:</span>),
     forFoulsBad: (
-        <span><b>RUIM:</b> Alunos que estão em situação crítica e precisam de intervenção urgente. São considerados em situação ruim:</span>),
+        <span><b>CRÍTICO:</b> Alunos que estão em situação crítica e precisam de intervenção urgente. São considerados em situação criticas:</span>),
     forNotesIntervention: (<span><b>INTERVENÇÃO:</b> Alunos que estão em risco de reprovação e precisam de ações imediatas. São considerados em intervenção:</span>),
     forFoulsIntervention: (<span><b>INTERVENÇÃO:</b> Alunos que estão em risco de reprovação e precisam de ações imediatas. São considerados em intervenção:</span>),
     forNotesAlertN1: "Até a N1, os alunos com notas abaixo de 6.",

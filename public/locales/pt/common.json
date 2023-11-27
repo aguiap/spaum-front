@@ -104,10 +104,10 @@
     "required": "Não pode ser vazio"
   },
   "ALERT": "ALERTA",
-  "BAD": "RUIM",
+  "BAD": "CRÍTICO",
   "INTERVENTION": "INTERVENÇÃO",
   "ALERTA": "ALERT",
-  "RUIM": "BAD",
+  "CRÍTICO": "BAD",
   "INTERVENÇÃO": "INTERVENTION",
   "sendEmailLoading": "Enviando email...",
   "loading": "Carregando...",

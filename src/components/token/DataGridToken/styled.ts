@@ -14,7 +14,7 @@ import { Tab, Tabs } from "@mui/material";
 
 export const FabButton = styled(ButtonDefault)`
   position: fixed;
-  bottom: 2rem;
+  bottom: 3rem;
   right: 3rem;
   background-color: ${primaryColor};
   border-radius: 50%;
@@ -28,6 +28,8 @@ export const FabButton = styled(ButtonDefault)`
 
 export const StyledDataGrid = styled(DataGrid)`
   cursor: pointer;
+  font-size: 1rem!important;
+  
   .row--INTERVENTION {
     background-color: ${redColorLight};
 
@@ -85,12 +87,13 @@ export const TabsComponent = styled(Tabs)`
 
 export const TabComponent = styled(Tab)`
   height: 10vh;
+  font-size: 1.2rem;
 `;
 
 export const ChartBox = styled.div`
   margin-top: 5rem;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 `;

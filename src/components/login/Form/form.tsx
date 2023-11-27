@@ -48,8 +48,8 @@ export const FormLogin = () => {
         <LoginImage
           src="./images/person.svg"
           alt={tx("userIcon")}
-          width={20}
-          height={20}
+          width={30}
+          height={30}
         ></LoginImage>
         <input
           onKeyUp={handleEnterClick}
@@ -61,8 +61,8 @@ export const FormLogin = () => {
         <LoginImage
           src="./images/password.svg"
           alt={tx("passwordIcon")}
-          width={20}
-          height={20}
+          width={30}
+          height={30}
         ></LoginImage>
         <input
           onKeyUp={handleEnterClick}

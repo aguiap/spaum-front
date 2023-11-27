@@ -13,18 +13,29 @@ export const UploadDragFile = styled.div`
   display: flex;
 
   > section {
+    width: 60%;
+    height: 50%;
     margin: auto;
+  }
+  
+  p{
+    text-align: center;
   }
 
   > section > article {
+    width: 100%;
+    height: 70%;
     border-radius: 1.3rem;
   }
 `;
 
 export const ButtonUploadFile = styled(Button)<{component: string}>`
-  margin-top: 1rem;
   color: ${tertiaryColor};
   background-color: ${grayColor};
+  width: 50%;
+  height: 30%;
+  margin-top: 10%;
+  font-size: 1.1rem;
 
   &:hover {
     background-color: ${grayColor};
@@ -36,10 +47,12 @@ export const ButtonUploadFile = styled(Button)<{component: string}>`
 `;
 
 export const ButtonContinue = styled(Button)`
-  margin-top: 1.9rem;
+  margin-top: .6rem;
   color: ${tertiaryColor};
   float: right;
-
+  width: 20rem;
+  height: 5rem;
+  font-size: 1.3rem;
   &:hover {
     background-color: ${primaryColorDark};
   }
@@ -51,15 +64,26 @@ export const ButtonContinue = styled(Button)`
 
 export const DivUploadDrag = styled.div`
   border-radius: 1rem !important;
-  width: 30rem;
+  width: 97%;
+  height: 85%;
+  display: flex;
+  margin: auto;
 `;
 
 export const AsideFileUploaded = styled.aside`
-  margin: 2rem 0 1rem 0;
+  margin: 2rem 0 2rem 0;
   display: flex;
 
   > div {
     display: inline;
+  }
+  
+  div:nth-last-child(0){
+    width: 100%;
+  }
+  
+  ul{
+    width: 100%;
   }
 
   > ul,
@@ -67,16 +91,17 @@ export const AsideFileUploaded = styled.aside`
     margin: auto;
     display: flex;
     width: 100%;
+    font-size: 1.2rem;
     height: 100%;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 27rem;
 
     > aside {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       text-align: left;
+      margin-left: 1rem;
     }
   }
 `;

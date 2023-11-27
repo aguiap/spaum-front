@@ -62,7 +62,7 @@ export const ChartsData = () => {
       ["Status", "Total"],
       [`Normal: ${normalTotals}`, normalTotals],
       [`Alerta: ${alertTotals}`, alertTotals],
-      [`Ruim: ${badTotals}`, badTotals],
+      [`Crítico: ${badTotals}`, badTotals],
       [`Intervenção: ${interventionTotals}`, interventionTotals]
     ];
   };
@@ -81,7 +81,7 @@ export const ChartsData = () => {
       ["Status", "Total"],
       [`Normal: ${normalTotals}`, normalTotals],
       [`Alerta: ${alertTotals}`, alertTotals],
-      [`Ruim: ${badTotals}`, badTotals],
+      [`Crítico: ${badTotals}`, badTotals],
       [`Intervenção: ${interventionTotals}`, interventionTotals]
     ];
   };

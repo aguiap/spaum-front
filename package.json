@@ -13,6 +13,7 @@
     "npm": "10.1.0"
   },
   "dependencies": {
+    "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mapbox/node-pre-gyp": "^1.0.11",
@@ -23,6 +24,7 @@
     "axios": "^1.5.1",
     "bcryptjs": "^2.4.3",
     "crypto-js": "^4.1.1",
+    "facepaint": "^1.2.1",
     "file-saver": "^2.0.5",
     "next": "^13.5.6",
     "observable-hooks": "^4.2.3",
@@ -40,6 +42,7 @@
     "styled-components": "^6.0.8"
   },
   "devDependencies": {
+    "@types/facepaint": "^1.2.5",
     "@types/file-saver": "^2.0.7",
     "@types/node": "latest",
     "@types/react": "latest",

@@ -14,8 +14,8 @@ export const BoxFab = styled(Button)<{component: string}>`
 
 export const BoxDiv = styled.div`
   position: fixed;
-  bottom: 2rem;
-  right: 4rem;
+  right: .5rem;
+  float: right;
   z-index: 1000000;
 `;
 
@@ -24,7 +24,8 @@ export const BoxFabIcon = styled(IconButton)`
   color: ${tertiaryColor};
   border: solid 2px lightgreen;
   padding: 0.8rem;
-  margin-left: 1rem;
+  margin-left: .5rem;
+  font-size: 1.2rem;
 
   &:hover {
     background-color: ${tertiaryColor};
