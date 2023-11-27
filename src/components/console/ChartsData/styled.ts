@@ -21,7 +21,7 @@ export const ChartsSection = styled.section`
 export const SectionChart = styled.section`
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   article{
     width: 100%;
@@ -31,6 +31,8 @@ export const SectionChart = styled.section`
 export const ButtonDefault = styled(Button)`
   border: none;
   width: 20rem;
+  height: 5rem;
+  font-size: 1.2rem;
   padding: 0.7rem;
   border-radius: 0.2rem;
   text-align: center;
@@ -45,8 +47,10 @@ export const ButtonDefault = styled(Button)`
 
 export const BoxModal = styled(Box)`
   overflow: auto;
+  font-size: 1.2rem;
   li {
     list-style-type: circle;
+    font-size: 1.2rem;
   }
   ul {
     padding: 1rem 1rem 1rem 4rem;
@@ -89,10 +93,16 @@ export const EmailTextField = styled(TextField)`
   border-color: white;
   outline-color: white;
   border-radius: 0.4rem;
+  
+  input{
+    font-size: 1.1rem;
+  }
 `;
 
 export const SendButton = styled(ButtonDefault)`
   width: 10rem;
+  font-size: 1rem!important;
+  height: 3.5rem!important;
   background-color: ${secondColorDark};
   &:hover {
     background-color: ${secondColorDark};

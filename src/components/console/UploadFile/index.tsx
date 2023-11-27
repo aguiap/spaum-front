@@ -12,13 +12,13 @@ import {useDropzone} from "react-dropzone";
 import {Typography} from "@mui/material";
 import {callToast, handleNavigation, tx} from "@/utils/functions";
 import Image from "next/image";
-import {grayColor} from "@/utils/constant/colors";
 import {SelectDefault} from "@/components/SelectDefault";
 import {normalizeJsonExcel} from "@/components/console/UploadFile/utils";
 import {importDataProcessing$, initialImportDataProcessing, loading$, showImport$} from "@/store";
 import {useObservableState} from "observable-hooks";
 import {useRouter} from "next/router";
 import {ToastType} from "@/components/console/UploadFile/enum";
+import {css} from "@emotion/css";
 
 const baseStyle = {
     flex: 1,
@@ -89,8 +89,8 @@ export const UploadFile = () => {
                 <Image
                     src="../images/excel.svg"
                     alt={tx("excelIcon")}
-                    width={50}
-                    height={50}
+                    width={60}
+                    height={60}
                 ></Image>
             </div>
             <ul>
@@ -107,8 +107,8 @@ export const UploadFile = () => {
                         src="../images/close-circle-red.svg"
                         alt={tx("Console.Import.removeExcel")}
                         title={tx("Console.Import.removeExcel")}
-                        width={20}
-                        height={20}
+                        width={30}
+                        height={30}
                     ></CloseImage>
                 </li>
             </ul>
@@ -138,18 +138,15 @@ export const UploadFile = () => {
     return (
         <UploadDragFile>
             <section>
-                <article
-                    style={{
-                        outline:
-                            isDragActive || isFocused ? "none" : `solid ${grayColor} 5px`
-                    }}
-                >
+                <article>
                     <DivUploadDrag {...getRootProps({style})}>
                         <input {...getInputProps()} />
                         {isDragActive ? (
-                            <Typography>{tx("Console.Import.dropHere")}</Typography>
+                            <Typography className={css`font-size: 2rem;
+                              padding-top: 1rem`}>{tx("Console.Import.dropHere")}</Typography>
                         ) : (
-                            <Typography>{tx("Console.Import.dragAndDropHere")}</Typography>
+                            <Typography className={css`font-size: 2rem;
+                              padding-top: 1rem`}>{tx("Console.Import.dragAndDropHere")}</Typography>
                         )}
                         <ButtonUploadFile
                             component="label"

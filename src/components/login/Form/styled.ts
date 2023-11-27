@@ -19,6 +19,8 @@ export const ButtonLogin = styled.div`
     border: none;
     width: 10rem;
     padding: 0.7rem;
+    height: 4rem;
+    font-size: 1.2rem;
     border-radius: 0.2rem;
     text-align: center;
     background-color: ${secondColor};
@@ -47,7 +49,7 @@ export const ButtonDefault = styled(Button)`
 `;
 
 export const InputLogin = styled.div`
-  height: 3rem;
+  height: 4rem;
   background-color: ${primaryColor};
   border-radius: 0.2rem;
   border: solid ${tertiaryColor} 3px;
@@ -59,6 +61,7 @@ export const InputLogin = styled.div`
     border: none;
     outline: none;
     padding-left: 1rem;
+    font-size: 1.2rem;
     color: ${tertiaryColor};
     background-color: ${primaryColor};
   }
@@ -75,6 +78,6 @@ export const LoginImage = styled(Image)`
 `;
 
 export const FormComponent = styled.div`
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
 `;

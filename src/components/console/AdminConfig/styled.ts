@@ -22,7 +22,7 @@ export const AdminSection = styled.section`
 
     hr {
       flex: 2;
-      height: 3px;
+      height: 5px;
       background-color: ${grayColor};
       border: none;
       margin: auto 0;
@@ -30,6 +30,10 @@ export const AdminSection = styled.section`
 
     span {
       margin: auto 0;
+    }
+    
+    p{
+      font-size: 3.4rem;
     }
   }
 `;
@@ -44,19 +48,23 @@ export const ChangePasswordButton = styled(Button)`
   color: ${tertiaryColor};
   height: 3rem;
   margin: auto 0;
+  font-size: 1rem;
   font-weight: bold;
 `;
 
 export const OutlinedInputPassword = styled(OutlinedInput)`
   width: 90%;
+  font-size: 1rem;
 `;
 
 export const OutButton = styled(Button)`
   color: ${tertiaryColor};
   background-color: ${grayColor};
-  height: 3rem;
+  height: 4rem;
+  width: 6rem;
   margin: auto 0;
   font-weight: bold;
+  font-size: 1.2rem;
   &:hover {
     background-color: ${grayColor};
   }

@@ -52,5 +52,5 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const ToastRequest = styled(ToastContainer)`
-z-index: 999999999;
+  z-index: 999999999;
 `

@@ -15,7 +15,7 @@ export const CoursesSection = styled.section`
 
     hr {
       flex: 2;
-      height: 3px;
+      height: 5px;
       background-color: ${grayColor};
       border: none;
       margin: auto 0;
@@ -24,6 +24,9 @@ export const CoursesSection = styled.section`
     span {
       margin: auto 0;
     }
+    
+    p {
+      font-size: 3.4rem;
   }
 }
 `;

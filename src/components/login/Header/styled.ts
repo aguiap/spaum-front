@@ -9,15 +9,15 @@ export const HeaderFlex = styled.div`
 
   hr {
     height: 0.4rem;
-    width: 60%;
+    width: 65%;
     background-color: ${tertiaryColor};
     margin: 0 auto;
     border: none;
   }
 
   span {
-    width: 60%;
-    font-size: 2rem;
+    width: 65%;
+    font-size: 2.5rem;
     color: ${tertiaryColor};
     margin: 7% auto;
   }
@@ -30,7 +30,7 @@ export const WrittenLogo = styled(Image)`
 
 export const H1LastChild = styled.div`
   height: 0.4rem;
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
 
   hr {
